@@ -10,6 +10,11 @@ public class mRepository {
     @Autowired
     SqlSessionTemplate sql;
     public int save(mDto mem) {
+        System.out.println("repository"+mem);
         return sql.insert("data.save",mem);
+    }
+
+    public mDto findid(String mid) {
+        return sql.selectOne("data.findid",mid);
     }
 }

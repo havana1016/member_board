@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<a href="save-form"><button>회원가입</button></a><br>
+<a href="member/save-form"><button>회원가입</button></a><br>
 <a href="login-form"><button>로그인</button></a><br>
 <a href="findall"><button>글 목록</button></a><br>
 

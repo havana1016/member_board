@@ -277,15 +277,34 @@
         function re(){
             location.href="save-form"
         }
+
+        function idck(){
+            let mid=document.getElementById("mid")
+            let upid=document.getElementById("up-id")
+            $.ajax({
+                url:"member/findid",
+                type:"get",
+                data:{mid:mid.value},
+                dataType:"json",
+                success:function (e){
+                    upid.innerHTML="사용중인 아이디입니다."
+                    mid.className = ("form-control is-invalid")
+                    upid.style.color = "red"
+                },
+                error:function (e){
+
+                }
+            })
+        }
     </script>
 
 </head>
 <body>
     <div class="form-control m-3" style="width: 500px" >
         <h2>회원가입</h2>
-        <form action="save" method="post" enctype="multipart/form-data">
+        <form action="/member/save" method="get" enctype="multipart/form-data">
             <div class="item row g-1">
-            <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="idc()" onblur="idc()"><br>
+            <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="idc()" onblur="idc(),idck()"><br>
             <p class="uptext" id="up-id"></p>
             </div>
             <div class="item row g-1">
@@ -310,7 +329,7 @@
                             </div>
                                 <div class="item row row-cols-2">
                                     <p class="uptext1">프로필 사진을 등록해주세요.(선택사항)</p>
-                                    <input class="form-control" type="file">
+                                    <input class="form-control" type="file" name="bf">
                                 </div><br><br>
             <div>
             <input class="btn btn-outline-secondary input-group" id="sub" type="submit" value="가입하기" disabled="disabled">

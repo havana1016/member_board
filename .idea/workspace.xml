@@ -9,7 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8985bc15-8a22-4b34-8d14-cc0a4221236d" name="Changes" comment="" />
+    <list default="true" id="8985bc15-8a22-4b34-8d14-cc0a4221236d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/controller/mController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/controller/mController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/dto/mDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/dto/mDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/repository/mRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/repository/mRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/service/mService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/service/mService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/save-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/save-form.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/development_HSS/source/spring_framework/member_board/src/main/webapp/resources/css",
+    "last_opened_file_path": "C:/Users/user/Downloads/Board_220523",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   },
   "keyToStringList": {
@@ -174,6 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653538993854</updated>
       <workItem from="1653538995590" duration="15833000" />
+      <workItem from="1653567362184" duration="6638000" />
     </task>
     <servers />
   </component>
