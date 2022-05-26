@@ -4,7 +4,10 @@
 
 
 <mapper namespace="data">
-
+<insert id="save" parameterType="mdto">
+    insert into member (mid,mpw,mname,memail,mphone,mdate,mfname)
+                values (#{mid},#{mpw},#{mname},#{memail},#{mphone},now(),#{mfname})
+</insert>
 </mapper>
 
 
