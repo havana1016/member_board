@@ -9,7 +9,7 @@
                 values (#{mid},#{mpw},#{mname},#{memail},#{mphone},now(),#{mfname})
 </insert>
 
-    <select id="findid" resultType="mdto">
+    <select id="findid" resultType="mdto" parameterType="mdto">
         select * from member where mid=#{mid}
     </select>
 </mapper>

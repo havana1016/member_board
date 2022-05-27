@@ -3,9 +3,10 @@ package member_board.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.multipart.MultipartFile;
 
-@Data @AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Data
 public class mDto {
     Long id;
     String mid;
@@ -14,6 +15,6 @@ public class mDto {
     String memail;
     String mphone;
     String mdate;
-    MultipartFile bf;
-    String fname;
+    MultipartFile mf;
+    String mfname;
 }

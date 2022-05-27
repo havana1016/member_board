@@ -83,12 +83,13 @@
 
 
                 if (id.match(exp)) {
-                    inputid.className = ("form-control is-valid")
-
-                    upid.innerHTML = "사용가능한 아이디입니다."
-                    upid.style.color = "green"
-                    next.removeAttribute("disabled")
-                    next1.removeAttribute("disabled")
+                    // inputid.className = ("form-control is-valid")
+                    //
+                    // upid.innerHTML = "사용가능한 아이디입니다."
+                    // upid.style.color = "green"
+                    // next.removeAttribute("disabled")
+                    // next1.removeAttribute("disabled")
+                    idck();
                 } else if (!id.match(exp)) {
                     inputid.className = ("form-control is-invalid")
 
@@ -279,20 +280,43 @@
         }
 
         function idck(){
-            let mid=document.getElementById("mid")
-            let upid=document.getElementById("up-id")
+            let midv=document.getElementById("mid").value;
+            let mid=document.getElementById("mid");
+            let upid=document.getElementById("up-id");
+            let next=document.getElementById("mpw");
+            let next1=document.getElementById("repw");
+            console.log("idck호출 : "+midv);
             $.ajax({
-                url:"member/findid",
+                url:"/member/findid",
                 type:"get",
-                data:{mid:mid.value},
-                dataType:"json",
+                data:{"mid":midv},
+                dataType:"text",
                 success:function (e){
+                    if(e=="no"){
+
+                    console.log("ajax e: "+e);
                     upid.innerHTML="사용중인 아이디입니다."
                     mid.className = ("form-control is-invalid")
                     upid.style.color = "red"
+                    next.setAttribute("disabled","disabled")
+                    next1.setAttribute("disabled","disabled")}else{
+
+                        upid.innerHTML = "사용가능한 아이디입니다."
+                        upid.style.color = "green"
+                        mid.className = ("form-control is-valid")
+                        next.removeAttribute("disabled")
+                        next1.removeAttribute("disabled");
+                    }
                 },
                 error:function (e){
-
+                    //
+                    alert("ajax호출 error")
+                    // upid.innerHTML = "사용가능한 아이디입니다."
+                    // upid.style.color = "green"
+                    // next.removeAttribute("disabled")
+                    // next1.removeAttribute("disabled");
+                    // next.removeAttribute("disabled")
+                    // next1.removeAttribute("disabled")
                 }
             })
         }
@@ -302,9 +326,9 @@
 <body>
     <div class="form-control m-3" style="width: 500px" >
         <h2>회원가입</h2>
-        <form action="/member/save" method="get" enctype="multipart/form-data">
+        <form action="/member/save" method="post" enctype="multipart/form-data">
             <div class="item row g-1">
-            <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="idc()" onblur="idc(),idck()"><br>
+            <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="" onblur="idc()"><br>
             <p class="uptext" id="up-id"></p>
             </div>
             <div class="item row g-1">
@@ -312,7 +336,7 @@
             <p class="uptext" id="up-pw"></p>
             </div>
                 <div class="item row g-1">
-            <input disabled="disabled" class="form-control" type="text" id=repw placeholder="비밀번호 확인" onclick="uprepw(),resetrepw()" onkeyup="repwc()" onblur="repwc()"><br>
+            <input disabled="disabled" class="form-control" type="text" id=repw placeholder="비밀번호 확인" onclick="uprepw()" onkeyup="repwc()" onblur="resetrepw(),repwc()"><br>
             <p class="uptext" id="up-repw"></p>
                 </div>
                     <div class="item row g-1">
@@ -327,9 +351,9 @@
             <input disabled="disabled" class="form-control" type="text" name="mphone" id="mphone" placeholder="전화번호 입력" onclick="upphone()" onkeyup="telc()" onblur="telc()"><br>
             <p class="uptext" id="up-phone"></p>
                             </div>
-                                <div class="item row row-cols-2">
+                                <div class="item row g-1">
                                     <p class="uptext1">프로필 사진을 등록해주세요.(선택사항)</p>
-                                    <input class="form-control" type="file" name="bf">
+                                    <input class="form-control" type="file" name="mf">
                                 </div><br><br>
             <div>
             <input class="btn btn-outline-secondary input-group" id="sub" type="submit" value="가입하기" disabled="disabled">

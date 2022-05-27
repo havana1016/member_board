@@ -62,8 +62,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/Downloads/Board_220523",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "last_opened_file_path": "D:/development_HSS/source/spring_framework/Member_0518",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
   "keyToStringList": {
     "GitStage.ChangesTree.GroupingKeys": [
@@ -185,7 +185,16 @@
       <updated>1653538993854</updated>
       <workItem from="1653538995590" duration="15833000" />
       <workItem from="1653567362184" duration="6638000" />
+      <workItem from="1653608171488" duration="25032000" />
     </task>
+    <task id="LOCAL-00001" summary="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현">
+      <created>1653642424622</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653642424622</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,5 +210,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현" />
   </component>
 </project>

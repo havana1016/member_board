@@ -4,6 +4,7 @@ import member_board.dto.mDto;
 import member_board.service.mService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -19,17 +20,63 @@ public class mController {
         return "member/save-form";
     }
 
-    @GetMapping("/save")
-    void save(@ModelAttribute mDto mem) throws IOException {
+    @PostMapping("/save")
+    String save(@ModelAttribute mDto mem) throws IOException {
         System.out.println("mController.save");
         System.out.println(mem);
         if(ms.save(mem)>0){
+            return "member/login";
+        }return "index";
+    }
+    @GetMapping("/findid")
+    @ResponseBody String findid(@RequestParam("mid")String mid){
+        System.out.println("controller mid : "+mid);
+        mDto mem=ms.findid(mid);
+        System.out.println("cont mem : "+mem);
+        if(mem==null){
+            return "yes";
+        }return "no";
 
-        };
-    }
-    @GetMapping("findid")
-    mDto findid(@RequestParam("mid")String mid){
-        return ms.findid(mid);
-    }
+        }
+    @GetMapping("/login")
+    String login(){
+        return "member/login";
+       }
+       @PostMapping("/logc")
+        @ResponseBody mDto logc(@RequestParam("mid")String mid,@RequestParam("mpw")String mpw, Model model){
+           System.out.println("mController.logc");
+           System.out.println("mid : "+mid);
+           mDto result= ms.findid(mid);
+           System.out.println("mController.logc");
+           System.out.println("result : "+result);
+           if(result.getMpw().equals(mpw)){
+               return result;
+           }
+           return null;
+           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
