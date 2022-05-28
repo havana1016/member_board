@@ -13,7 +13,7 @@
 <body>
 <input type="text" name="serch" placeholder="검색">
 
-<button>글쓰기</button>
+<button onclick="location.href='/board/text-form'">글쓰기</button>
 
 </body>
 </html>

@@ -10,15 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8985bc15-8a22-4b34-8d14-cc0a4221236d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/member_board/repository/bRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/member_board/service/bService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/bMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/text-form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/controller/bController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/controller/bController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/member_board/controller/mController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/controller/mController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/dto/mDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/dto/mDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/repository/mRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/repository/mRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/service/mService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/service/mService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/save-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/save-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/development_HSS/source/spring_framework/Member_0518",
+    "last_opened_file_path": "C:/Users/Administrator/Documents/GitHub/member_board/src/main/resources/mapper",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   },
   "keyToStringList": {
@@ -74,19 +73,23 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="member_board.repository" />
+      <recent name="member_board.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\GitHub\member_board\src\main\resources\mapper" />
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\webapp\resources\css" />
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\webapp\resources\js" />
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\resources" />
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\resources\mapper" />
-      <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\webapp\WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\webapp\WEB-INF\views\member" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-11" nameIsGenerated="true">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -98,6 +101,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="b9ba19b4-1d52-4813-ab39-a4ee18d40cfa" />
+        <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -186,6 +190,7 @@
       <workItem from="1653538995590" duration="15833000" />
       <workItem from="1653567362184" duration="6638000" />
       <workItem from="1653608171488" duration="25032000" />
+      <workItem from="1653730921221" duration="6984000" />
     </task>
     <task id="LOCAL-00001" summary="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현">
       <created>1653642424622</created>

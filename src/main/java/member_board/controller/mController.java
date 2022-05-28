@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @Controller
@@ -43,13 +44,15 @@ public class mController {
         return "member/login";
        }
        @PostMapping("/logc")
-        @ResponseBody mDto logc(@RequestParam("mid")String mid,@RequestParam("mpw")String mpw, Model model){
+        @ResponseBody mDto logc(@RequestParam("mid")String mid, @RequestParam("mpw")String mpw, Model model, HttpSession session){
            System.out.println("mController.logc");
            System.out.println("mid : "+mid);
            mDto result= ms.findid(mid);
            System.out.println("mController.logc");
            System.out.println("result : "+result);
            if(result.getMpw().equals(mpw)){
+            session.setAttribute("logmem",result);
+            session.setAttribute("logid",result.getMid());
                return result;
            }
            return null;
