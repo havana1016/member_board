@@ -14,10 +14,11 @@
 </head>
 <body>
 <div class="form-control" style="width: 400px">
-    <form action="/board/save">
+    <form action="/board/save" method="post" enctype="multipart/form-data">
         <input type="text" name="mid" class="form-control" value="${sessionScope.logid}" hidden><br>
         <input type="text" name="btitle" class="form-control" placeholder="제목을 입력하세요."><br>
         <textarea name="btext" id="btext" class="form-control" cols="30" rows="5" placeholder="내용을 입력하세요."></textarea><br>
+        <input class="form-control" type="file" name="bf"><br>
         <button class="btn btn-outline-secondary container" type="submit" >글 작성</button>
     </form>
 

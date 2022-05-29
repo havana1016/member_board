@@ -8,10 +8,22 @@
     insert into board (btitle,mid,btext,bdate,bfname)
                 values (#{btitle},#{mid},#{btext},now(),#{bfname})
 </insert>
-
-    <select id="findid" resultType="mdto" parameterType="mdto">
-        select * from r where mid=#{mid}
+<select id="findall" resultType="bdto">
+    select * from board
+</select>
+    <select id="pagingList" parameterType="java.util.HashMap" resultType="bdto">
+        select * from board order by bid desc limit #{start}, #{limit}
     </select>
+<select id="findid" resultType="bdto">
+    select * from board where bid=#{bid}
+</select>
+
+    <select id="count" resultType="int">
+        select count(bid) from board
+    </select>
+    <update id="hit" parameterType="bdto">
+        update board set bhit=bhit+1 where bid=#{bid}
+    </update>
 </mapper>
 
 
