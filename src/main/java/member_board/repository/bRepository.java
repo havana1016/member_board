@@ -40,4 +40,12 @@ public class bRepository {
     public void hit(bDto mem) {
         sql.update("board.hit",mem);
     }
+
+    public List<bDto> search(Map<String, String> slist) {
+//        return sql.selectList("board.search",slist);
+        List<bDto> list= sql.selectList("board.search",slist);
+        System.out.println("bRepository.search");
+        System.out.println(list);
+        return list;
+    }
 }

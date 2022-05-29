@@ -9,18 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8985bc15-8a22-4b34-8d14-cc0a4221236d" name="Changes" comment="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/member_board/dto/pDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
+    <list default="true" id="8985bc15-8a22-4b34-8d14-cc0a4221236d" name="Changes" comment="게시판 메인 페이지 글 리스트 띄우기 구현&#10;게시판 글 클릭시 글의 디테일 페이지 띄우기 구현&#10;내가 작성한 글 클릭시 수정과 삭제 버튼 띄우기 구현">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/resultlist.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/member_board/controller/bController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/controller/bController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/member_board/repository/bRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/repository/bRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/member_board/service/bService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/service/bService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/service/mService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/service/mService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/bMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/bMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/text-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/text-form.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +196,7 @@
       <workItem from="1653608171488" duration="25032000" />
       <workItem from="1653730921221" duration="6984000" />
       <workItem from="1653798092190" duration="3719000" />
-      <workItem from="1653801839208" duration="10834000" />
+      <workItem from="1653801839208" duration="21622000" />
     </task>
     <task id="LOCAL-00001" summary="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현">
       <created>1653642424622</created>
@@ -208,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653642424622</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="게시판 메인 페이지 글 리스트 띄우기 구현&#10;게시판 글 클릭시 글의 디테일 페이지 띄우기 구현&#10;내가 작성한 글 클릭시 수정과 삭제 버튼 띄우기 구현">
+      <created>1653813527542</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653813527542</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +231,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현" />
+    <MESSAGE value="게시판 메인 페이지 글 리스트 띄우기 구현&#10;게시판 글 클릭시 글의 디테일 페이지 띄우기 구현&#10;내가 작성한 글 클릭시 수정과 삭제 버튼 띄우기 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="게시판 메인 페이지 글 리스트 띄우기 구현&#10;게시판 글 클릭시 글의 디테일 페이지 띄우기 구현&#10;내가 작성한 글 클릭시 수정과 삭제 버튼 띄우기 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

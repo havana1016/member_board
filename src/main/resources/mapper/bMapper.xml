@@ -24,6 +24,11 @@
     <update id="hit" parameterType="bdto">
         update board set bhit=bhit+1 where bid=#{bid}
     </update>
+    <select id="search" resultType="bdto">
+        select * from board where ${type} like concat('%',#{search},'%')
+    </select>
+
+
 </mapper>
 
 

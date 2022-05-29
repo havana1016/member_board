@@ -11,24 +11,62 @@
 <head>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <script src="\resources\js\jquery.js"></script>
-
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <title>Title</title>
 
-<script>
+<style>
+    /*body{*/
+    /*    text-align: center;*/
+    /*}*/
+</style>
+    <script>
+        function search(){
+            let search=document.getElementById("search").value;
+            let type=document.getElementById("type").value;
+            $.ajax({
+                url:"/board/search",
+                type:"get",
+                data:{"search":search,"type":type},
+                dataType:"json",
+                success:function (e){
+                    console.log("success")
+                    console.log(${blist})
 
-</script>
+
+
+                },
+                error:function (e){
+                    console.log("error")
+                }
+
+            })
+        }
+    </script>
 </head>
 
 <body>
-<input type="text" name="serch" placeholder="검색">
 
-<div id="blist">
-    <table class="table table-bordered table-hover">
-        <tr style="background-color: gray">
-            <th>글번호</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>조회수</th>
+<div id="blist" class="form-control" style="width: 600px">
+
+    <form class="input-group" action="/board/search" method="get">
+<%--    <div class="input-group">--%>
+        <select class="form-select " name="type" id="type">
+            <option value="mid">작성자</option>
+            <option value="btitle">제목</option>
+        </select>
+
+    <input type="text" class="form-control" name="search" id="search" placeholder="검색어 입력">
+<%--        <button  class="input-group-text btn btn-outline-secondary" onclick="search()">검색</button>--%>
+        <input type="submit" class="input-group-text btn btn-outline-secondary" value="검색"></input>
+    </form>
+
+    <table class="table table-bordered table-hover mt-4">
+        <tr style="background-color:rgba(0,0,0,0.1)">
+            <th class="col-2">글번호</th>
+            <th style="text-align: left">제목</th>
+            <th class="col-2">작성자</th>
+            <th class="col-2">조회수</th>
         </tr>
         <c:forEach var="blist" items="${boardList}">
             <tr onclick=location.href="detail/?bid=${blist.bid}">
@@ -40,13 +78,14 @@
             </tr>
         </c:forEach>
     </table>
-</div>
+    <c:if test="${sessionScope.logid!=null}">
+<button class="btn btn-outline-secondary" onclick="location.href='/board/text-form'">글쓰기</button><br>
+    </c:if>
+<%--</div>--%>
 
 
-<button class="btn btn-outline-secondary" onclick="location.href='/board/text-form'">글쓰기</button>
 
-
-<div class="container">
+<%--<div class="container">--%>
     <ul class="pagination justify-content-center">
         <c:choose>
             <c:when test="${paging.page<=1}">

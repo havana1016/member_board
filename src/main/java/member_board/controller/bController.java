@@ -41,5 +41,13 @@ public class bController {
         model.addAttribute("mem",bs.findid(mem));
         return "board/detail";
     }
+    @GetMapping ("/search")
+     String search(@RequestParam("search")String search,@RequestParam("type")String type,Model model){
+        List<bDto> result=bs.search(search,type);
+        model.addAttribute("blist",result);
+        System.out.println("bController.search");
+        System.out.println(result);
+        return("board/resultlist");
+    }
 
 }

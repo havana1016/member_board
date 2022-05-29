@@ -50,7 +50,7 @@
     </table>
     <c:if test="${mem.mid eq sessionScope.logid}" >
         <div>
-            <button class="btn btn-outline-secondary">수정하기</button>
+            <button class="btn btn-outline-secondary" onclick="location.href='/board/update?bid=${mem.bid}'">수정하기</button>
             <button class="btn btn-outline-secondary">삭제하기</button>
 
         </div>

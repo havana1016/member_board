@@ -37,7 +37,7 @@ public class bService {
         return br.findall();
     }
 
-    private static final int PAGE_LIMIT = 3;
+    private static final int PAGE_LIMIT = 5;
     //한 페이지에 보여줄 글 갯수
     private static final int BLOCK_LIMIT = 3;
     //페이지 번호를 몇개씩 보여줄거냐
@@ -90,5 +90,14 @@ public class bService {
 
     public void hit(bDto mem) {
         br.hit(mem);
+    }
+
+    public List<bDto> search(String search, String type) {
+        Map<String,String> slist=new HashMap<>();
+        slist.put("search",search);
+        slist.put("type",type);
+        return br.search(slist);
+
+
     }
 }
