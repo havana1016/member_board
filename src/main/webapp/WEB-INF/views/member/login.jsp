@@ -11,33 +11,42 @@
     <title>Title</title>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <script src="\resources\js\jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <style>
         .ltext{
             margin-top: 20px;
             margin-bottom: 8px;
+            color: gray;
         }
 
         .form-control:focus{
             border-color: #8c8f91;
             box-shadow: 0 0 0 0.2rem rgba(74, 74, 75, 0.5);
         }
+        .up{
+            font-size: small;
+        }
+        .gray{
+            color:gray;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
-    <div class="form-control" style="width: 400px">
-            login
+    <div class="form-control container " style=" margin-top:300px; width: 400px">
+        <h2 class="gray mt-2"><i class="bi bi-gem"></i></h2>
             <div>
-            <p class="ltext">아이디</p>
+            <p class="ltext">ID</p>
             <input type="text" class="form-control" name="mid" id="mid" onclick="reset()" placeholder="아이디를 입력하세요.">
             </div>
             <div>
-            <p class="ltext">패스워드</p>
+            <p class="ltext">Password</p>
             <input type="text" class="form-control" name="mpw" id="mpw" onclick="reset()" placeholder="비밀번호를 입력하세요.">
             </div>
             <div class="row">
-                <p id="upresult"></p>
-            <button class="btn btn-outline-secondary mt-5 container col-4" onclick="logc()" onblur=>로그인</button>
+                <p id="upresult" class="up"></p>
+            <button class="btn btn-outline-secondary mb-2 container col-4" onclick="logc()" onblur=>로그인</button>
             </div>
     </div>
 </body>

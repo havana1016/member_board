@@ -10,14 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8985bc15-8a22-4b34-8d14-cc0a4221236d" name="Changes" comment="게시판 메인 페이지 글 리스트 띄우기 구현&#10;게시판 글 클릭시 글의 디테일 페이지 띄우기 구현&#10;내가 작성한 글 클릭시 수정과 삭제 버튼 띄우기 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/resultlist.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/controller/bController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/controller/bController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/repository/bRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/repository/bRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member_board/service/bService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member_board/service/bService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/bMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/bMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Administrator/Downloads/Board_220523/Board_220523",
+    "last_opened_file_path": "C:/work/java/source/java_git/Git_clone/havana1016.github.io",
     "settings.editor.selected.configurable": "Errors",
     "spring.configuration.checksum": "cf0ed3c99ad83ffcb27008e78d69efbc"
   },
@@ -93,7 +89,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-11" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11" nameIsGenerated="true">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -197,6 +193,7 @@
       <workItem from="1653730921221" duration="6984000" />
       <workItem from="1653798092190" duration="3719000" />
       <workItem from="1653801839208" duration="21622000" />
+      <workItem from="1653831603694" duration="3708000" />
     </task>
     <task id="LOCAL-00001" summary="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현">
       <created>1653642424622</created>
