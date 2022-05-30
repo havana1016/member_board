@@ -1,8 +1,10 @@
 package member_board.controller;
 
 import member_board.dto.bDto;
+import member_board.dto.cDto;
 import member_board.dto.pDto;
 import member_board.service.bService;
+import member_board.service.cService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,8 @@ import java.util.List;
 public class bController {
     @Autowired
     bService bs;
+    @Autowired
+    cService cs;
     @GetMapping("/findall")
     String findall(@RequestParam(value="page", required=false, defaultValue="1") int page, Model model){
 
@@ -39,6 +43,9 @@ public class bController {
     String detail(@ModelAttribute bDto mem,Model model){
         bs.hit(mem);
         model.addAttribute("mem",bs.findid(mem));
+        cDto cd=new cDto();
+        cd.setBid(mem.getBid());
+        model.addAttribute("clist",cs.findid(cd));
         return "board/detail";
     }
     @GetMapping ("/search")
@@ -48,6 +55,30 @@ public class bController {
         System.out.println("bController.search");
         System.out.println(result);
         return("board/resultlist");
+    }
+    @GetMapping("update")
+    String update(@ModelAttribute bDto mem,Model model){
+        model.addAttribute("mem",bs.findid(mem));
+        return "board/update";
+
+    }
+    @PostMapping("update")
+    String update1(@ModelAttribute bDto up,Model model){
+        if(bs.update(up)>0){
+            bDto result=bs.findid(up);
+            model.addAttribute("mem",result);
+            cDto cd=new cDto();
+            cd.setBid(result.getBid());
+            model.addAttribute("clist",cs.findid(cd));
+            return "/board/detail";
+        } return  "/index";
+    }
+    @GetMapping("delete")
+    String del(@ModelAttribute bDto del,Model model){
+        if(bs.delete(del)>0){
+
+            return "redirect:/board/findall";
+        }return "/index";
     }
 
 }

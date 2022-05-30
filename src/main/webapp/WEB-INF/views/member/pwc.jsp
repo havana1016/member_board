@@ -35,21 +35,17 @@
     </style>
 </head>
 <body>
-    <div class="form-control container " style=" margin-top:200px; width: 400px">
-        <h2 class="gray mt-2"><i class="bi bi-gem"></i></h2>
-            <div>
-            <p class="ltext">ID</p>
-            <input type="text" class="form-control gray" name="mid" id="mid" onclick="reset()" placeholder="아이디를 입력하세요.">
-            </div>
-            <div>
-            <p class="ltext">Password</p>
-            <input type="text" class="form-control gray" name="mpw" id="mpw" onclick="reset()" placeholder="비밀번호를 입력하세요.">
-            </div>
-            <div class="row">
-                <p id="upresult" class="up"></p>
-            <button class="btn btn-secondary mb-2 container col-4" onclick="logc()" onblur=>로그인</button>
-            </div>
+<div class="form-control container " style=" margin-top:200px; width: 400px">
+    <h2 class="gray mt-2"><i class="bi bi-gem"></i></h2>
+        <div>
+        <p class="ltext">Password</p>
+        <input type="text" class="form-control gray" name="mpw" id="mpw" onclick="reset()" placeholder="비밀번호를 입력하세요.">
     </div>
+    <div class="row">
+        <p id="upresult" class="up"></p>
+        <button class="btn btn-secondary mb-2 container col-4" onclick="pwc()">확인하기</button>
+    </div>
+</div>
 </body>
 <script>
     function logc(){

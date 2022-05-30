@@ -27,8 +27,12 @@
     <select id="search" resultType="bdto">
         select * from board where ${type} like concat('%',#{search},'%')
     </select>
-
-
+    <update id="update" >
+        update board set btitle=#{btitle},btext=#{btext},bdate=now() where bid=#{bid}
+    </update>
+    <delete id="delete">
+        delete from board where bid=#{bid}
+    </delete>
 </mapper>
 
 

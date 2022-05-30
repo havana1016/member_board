@@ -58,7 +58,22 @@ public class mController {
            return null;
            }
 
+    @GetMapping("/logout")
+    public String logout(HttpSession session){
+        session.invalidate();
+        return "index";}
 
+    @GetMapping("mypage")
+    String mypage(@RequestParam("mid")String mid,Model model){
+        model.addAttribute("mem", ms.findid(mid));
+        return ("/member/mypage");
+    }
+    @GetMapping("pwc")
+    String update(@RequestParam("type")String type,@RequestParam("mid")String mid,Model model){
+        model.addAttribute("mem",ms.findid(mid));
+        model.addAttribute("type",type);
+        return "/member/pwc";
+    }
 
 
 

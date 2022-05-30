@@ -8,13 +8,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <jsp:include page="./layout/header.jsp" flush="false"></jsp:include>
+
     <title>Title</title>
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <script src="\resources\js\jquery.js"></script>
+    <style>
+        body{
+               /*/ background-color: darkgray;*/
+            height: 100vh;
+            background-image: url("https://wallpapercave.com/wp/wp3904942.jpg");
+            background-repeat : no-repeat;
+            background-size : cover;
+        }
+    </style>
 </head>
 <body>
-<a href="member/save-form"><button>회원가입</button></a><br>
-<a href="member/login"><button>로그인</button></a><br>
-<a href="board/findall"><button>글 목록</button></a><br>
 
+<div  style="width:300px;">
+
+    <table>
+        <tr>
+
+        </tr>
+    </table>
+
+<%--<button class="btn btn-light" onclick="location.href='/member/save-form'">회원가입</button>--%>
+<%--<button class="btn btn-light" onclick="location.href='/member/login'">로그인</button>--%>
+<%--<button class="btn btn-light" onclick="location.href='/board/findall'">글 목록</button>--%>
+</div>
 
 </body>
 </html>

@@ -8,7 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <script src="\resources\js\jquery.js"></script>
@@ -38,7 +40,9 @@
         .item {
             margin-top: 10px;
         }
-
+        .gray{
+            color: gray;
+        }
 
     </style>
 
@@ -239,7 +243,7 @@
             let exp = /^01(?:0|1|[0|6-9])(?:\d{3}|\d{4})\d{4}$/;
 
 
-            if(id==0){
+            if(id.length==0){
                 inputid.className = ("form-control is-invalid")
                 upid.innerHTML = "필수 입력입니다."
                 upid.style.color = "red"
@@ -324,8 +328,9 @@
 
 </head>
 <body>
-    <div class="form-control m-3" style="width: 500px" >
-        <h2>회원가입</h2>
+    <div class="form-control container mt-3" style="width: 500px" >
+        <h2 class="gray mt-3 mb-4" style="text-align: right"><i class="bi bi-gem"></i>&nbsp;&nbsp;Join us</h2>
+
         <form action="/member/save" method="post" enctype="multipart/form-data">
             <div class="item row g-1">
             <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="" onblur="idc()"><br>
@@ -359,7 +364,7 @@
             <input class="btn btn-outline-secondary input-group" id="sub" type="submit" value="가입하기" disabled="disabled">
             </div>
         </form>
-        <button class="btn btn-outline-secondary input-group" onclick="re()">취소</button>
+        <button class="btn btn-secondary input-group mb-3" onclick="re()">취소</button>
     </div>
 
 

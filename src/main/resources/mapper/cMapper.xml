@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com">
+    <insert id="save">
+        insert into comment (bid,mid,ctext,cdate) values (#{bid},#{mid},#{ctext},now())
+    </insert>
+    <select id="findall" resultType="cdto">
+        select * from comment
+    </select>
+    <delete id="delc" parameterType="cdto">
+        delete from comment where cid=#{cid} and bid=#{bid}
+    </delete>
+    <select id="findid" resultType="cdto">
+        select * from comment where bid=#{bid} order by cdate desc
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

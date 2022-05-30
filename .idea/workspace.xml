@@ -57,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/work/java/source/java_git/Git_clone/havana1016.github.io",
+    "last_opened_file_path": "C:/Users/user/Documents/GitHub/member_board/src/main/resources/mapper",
     "settings.editor.selected.configurable": "Errors",
     "spring.configuration.checksum": "cf0ed3c99ad83ffcb27008e78d69efbc"
   },
@@ -75,11 +75,11 @@
       <recent name="member_board.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\GitHub\member_board\src\main\resources\mapper" />
       <recent name="C:\Users\Administrator\Documents\GitHub\member_board\src\main\resources\mapper" />
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\webapp\resources\css" />
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\webapp\resources\js" />
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\resources" />
-      <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\resources\mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\development_HSS\source\spring_framework\member_board\src\main\webapp\WEB-INF\views\member" />
@@ -194,6 +194,7 @@
       <workItem from="1653798092190" duration="3719000" />
       <workItem from="1653801839208" duration="21622000" />
       <workItem from="1653831603694" duration="3708000" />
+      <workItem from="1653867187764" duration="38269000" />
     </task>
     <task id="LOCAL-00001" summary="회원가입 정규식 및 아이디 중복체크 구현&#10;로그인 ajax처리 구현">
       <created>1653642424622</created>

@@ -48,4 +48,12 @@ public class bRepository {
         System.out.println(list);
         return list;
     }
+
+    public int update(bDto up) {
+        return sql.update("board.update",up);
+    }
+
+    public int delete(bDto del) {
+        return sql.delete("board.delete",del);
+    }
 }

@@ -11,6 +11,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <script src="\resources\js\jquery.js"></script>
+    <jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
+
 </head>
 <body>
 <div class="form-control" style="width: 400px">

@@ -17,9 +17,26 @@
     <title>Title</title>
 
 <style>
-    /*body{*/
-    /*    text-align: center;*/
-    /*}*/
+   .gray{
+       color: #5c636a;
+       text-align: center;
+   }
+
+
+   .form-control:focus{
+       border-color: #8c8f91;
+       box-shadow: 0 0 0 0.2rem rgba(74, 74, 75, 0.5);
+   }
+
+   .form-select:focus{
+       /*!*border-color:#86b7fe;*!*/
+       /*border-color:gray;*/
+
+       /*!*box-shadow:0 0 0 .25rem rgba(13,110,253,.25)*!*/
+       /*box-shadow:0 0 0 .25rem rgba(13,110,253,.25)*/
+       border-color: #8c8f91;
+       box-shadow: 0 0 0 0.2rem rgba(74, 74, 75, 0.5);
+   }
 </style>
     <script>
         function search(){
@@ -48,13 +65,13 @@
 
 <body>
 
-<div id="blist" class="form-control" style="width: 600px">
+<div id="blist" class="form-control container mt-5" style="width: 1000px; height: 700px">
 
-    <form class="input-group" action="/board/search" method="get">
+    <form class="input-group mt-3" action="/board/search" method="get">
 <%--    <div class="input-group">--%>
-        <select class="form-select " name="type" id="type">
-            <option value="mid">작성자</option>
-            <option value="btitle">제목</option>
+        <select class="form-select gray" name="type" id="type">
+            <option value="mid" class="gray">작성자</option>
+            <option value="btitle" class="gray">제목</option>
         </select>
 
     <input type="text" class="form-control" name="search" id="search" placeholder="검색어 입력">
@@ -63,21 +80,25 @@
     </form>
 
     <table class="table table-bordered table-hover mt-4">
-        <tr style="background-color:rgba(0,0,0,0.1)">
-            <th class="col-2">글번호</th>
-            <th style="text-align: left">제목</th>
-            <th class="col-2">작성자</th>
-            <th class="col-2">조회수</th>
+        <thead>
+        <tr>
+            <th class="col-2 gray">글번호</th>
+            <th class="gray">제목</th>
+            <th class="col-2 gray">작성자</th>
+            <th class="col-2 gray">조회수</th>
         </tr>
+        </thead>
+        <tbody>
         <c:forEach var="blist" items="${boardList}">
             <tr onclick=location.href="detail/?bid=${blist.bid}">
-                <td>${blist.bid}</td>
-                <td>${blist.btitle}</td>
-                <td>${blist.mid}</td>
-                <td>${blist.bhit}</td>
+                <td class="gray">${blist.bid}</td>
+                <td class="gray"  style="text-align: left" >${blist.btitle}</td>
+                <td class="gray">${blist.mid}</td>
+                <td class="gray">${blist.bhit}</td>
 
             </tr>
         </c:forEach>
+        </tbody>
     </table>
     <c:if test="${sessionScope.logid!=null}">
 <button class="btn btn-outline-secondary" onclick="location.href='/board/text-form'">글쓰기</button><br>
