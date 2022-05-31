@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Service
 public class mService {
@@ -21,7 +22,7 @@ public class mService {
     String mfname = mem.getMf().getOriginalFilename();//2
     mfname =System.currentTimeMillis()+"-"+mfname;//2.1
         mem.setMfname(mfname);//3
-    String savePath ="d:\\spring_img\\"+mfname;//4
+    String savePath ="D:\\spring_img\\"+mfname;//4
 
         if(!mem.getMf().isEmpty()){
             mem.getMf().transferTo(new File(savePath));
@@ -35,5 +36,17 @@ public class mService {
 
     public mDto findid(String mid) {
         return mr.findid(mid);
+    }
+
+    public int update(mDto mem) {
+        return mr.update(mem);
+    }
+
+    public int delete(String mid) {
+        return mr.delete(mid);
+    }
+
+    public List<mDto> member() {
+        return mr.member();
     }
 }

@@ -37,6 +37,16 @@
        border-color: #8c8f91;
        box-shadow: 0 0 0 0.2rem rgba(74, 74, 75, 0.5);
    }
+   body{
+       /*/ background-color: darkgray;*/
+       height: 100vh;
+       background-image: url("https://img.wallpapersafari.com/desktop/1024/576/60/72/D3Zzgu.jpg");
+
+       /*background-image: url("https://allhdwallpapers.com/wp-content/uploads/2018/03/Supreme-Wallpapers-desktop-and-mobile-HD-25.jpg");*/
+       /*background-image: url("https://wallpapercave.com/wp/wp3904942.jpg");*/
+       background-repeat : no-repeat;
+       background-size : cover;
+   }
 </style>
     <script>
         function search(){
@@ -65,7 +75,7 @@
 
 <body>
 
-<div id="blist" class="form-control container mt-5" style="width: 1000px; height: 700px">
+<div id="blist" class=" container mt-5" style="padding: 30px;width: 1100px; height: 700px; background-color: white">
 
     <form class="input-group mt-3" action="/board/search" method="get">
 <%--    <div class="input-group">--%>
@@ -79,7 +89,7 @@
         <input type="submit" class="input-group-text btn btn-outline-secondary" value="검색"></input>
     </form>
 
-    <table class="table table-bordered table-hover mt-4">
+    <table class="table table-bordered table-hover mt-5">
         <thead>
         <tr>
             <th class="col-2 gray">글번호</th>

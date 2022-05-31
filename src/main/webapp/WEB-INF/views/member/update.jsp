@@ -23,39 +23,50 @@
 
         }
     </style>
+    <script>
 
+
+
+
+
+
+
+
+
+
+    </script>
 
 </head>
 <body>
 <div class="form-control container " style="width: 700px; margin-top: 100px;">
+    <form action="/member/update" method="post" class="mt-3">
     <table class="gray table ">
         <tr>
-            <td rowspan="4" style="margin-right: 10px"><img src="${pageContext.request.contextPath}/upload/${mem.mfname}"
-                                 alt="" height="200" width="200"></td>
+
             <th>Name</th>
-            <td>${mem.mname}</td>
+            <td>${sessionScope.logmem.mname}</td>
         </tr>
         <tr>
             <th>Id</th>
-            <td>${mem.mid}</td>
+            <td>${sessionScope.logmem.mid}</td>
         </tr>
         <tr>
             <th>E-mail</th>
-            <td>${mem.memail}</td>
-
+            <td><input class="form-control" type="text" name="memail" value=${mem.memail}></td>
         </tr>
         <tr>
             <th>Mobile</th>
-            <td>${mem.mphone}</td>
-
+            <td><input class="form-control" type="text" name="mphone" value=${mem.mphone}></td>
         </tr>
-
+        <tr>
+            <th>Password</th>
+            <td><input class="form-control" type="password" name="mpw" value=${mem.mpw}></td>
+        </tr>
     </table>
+        <input type="text" name="mid" value=${mem.mid} hidden>
+        <button class="btn btn-secondary container" type="submit">수정하기</button>
+    </form>
 
-    <div class="input-group mt-5 mb-4">
-        <button class="btn btn-outline-secondary col-6" onclick="location.href='/member/pwc/?type=update&mid=${mem.mid}'">정보수정</button>
-        <button class="btn btn-outline-secondary col-6" onclick="location.href='/member/pwc/?type=delete&mid=${mem.mid}'">회원탈퇴</button>
-    </div>
 </div>
 
 

@@ -32,11 +32,18 @@
             color:gray;
             text-align: right;
         }
+        body{
+            /*/ background-color: darkgray;*/
+            height: 100vh;
+            background-image: url("https://images.unsplash.com/photo-1537247090800-2b3e9a940946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+            background-repeat : no-repeat;
+            background-size : cover;
+        }
     </style>
 </head>
 <body>
-    <div class="form-control container " style=" margin-top:200px; width: 400px">
-        <h2 class="gray mt-2"><i class="bi bi-gem"></i></h2>
+    <div class="container " style="background-color: rgba(253,253,253,0.8); margin-top:200px; width: 400px;padding: 30px">
+        <h2 class="gray"><i class="bi bi-gem"></i></h2>
             <div>
             <p class="ltext">ID</p>
             <input type="text" class="form-control gray" name="mid" id="mid" onclick="reset()" placeholder="아이디를 입력하세요.">
@@ -47,7 +54,7 @@
             </div>
             <div class="row">
                 <p id="upresult" class="up"></p>
-            <button class="btn btn-secondary mb-2 container col-4" onclick="logc()" onblur=>로그인</button>
+            <button class="btn btn-secondary mt-2 container col-4" onclick="logc()" onblur=>로그인</button>
             </div>
     </div>
 </body>

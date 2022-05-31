@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<div class="form-control" style="width: 400px">
+<div class="container " style="padding: 30px;width: 800px;margin-top: 100px;background-color: white">
     <form action="/board/save" method="post" enctype="multipart/form-data">
         <input type="text" name="mid" class="form-control" value="${sessionScope.logid}" hidden><br>
         <input type="text" name="btitle" class="form-control" placeholder="제목을 입력하세요."><br>

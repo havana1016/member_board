@@ -54,10 +54,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/board/findall">Board</a>
                 </li>
-                <c:if test="${sessionScope.logid!=null}">
+                <c:if test="${sessionScope.logid!=null && sessionScope.logid!='admin'}">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/member/mypage/?mid=${sessionScope.logid}">My Page</a>
                 </li>
+                </c:if>
+                <c:if test="${sessionScope.logid!=null && sessionScope.logid=='admin'}">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/member/member">회원목록</a>
+                    </li>
                 </c:if>
             </ul>
             <span class="navbar-text">

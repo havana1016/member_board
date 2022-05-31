@@ -17,7 +17,10 @@
         body{
                /*/ background-color: darkgray;*/
             height: 100vh;
-            background-image: url("https://wallpapercave.com/wp/wp3904942.jpg");
+            background-image: url("https://allhdwallpapers.com/wp-content/uploads/2018/03/Supreme-Wallpapers-desktop-and-mobile-HD-18.jpg");
+
+            /*background-image: url("https://allhdwallpapers.com/wp-content/uploads/2018/03/Supreme-Wallpapers-desktop-and-mobile-HD-25.jpg");*/
+            /*background-image: url("https://wallpapercave.com/wp/wp3904942.jpg");*/
             background-repeat : no-repeat;
             background-size : cover;
         }

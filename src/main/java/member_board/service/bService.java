@@ -22,7 +22,7 @@ public class bService {
         String bfname=text.getBf().getOriginalFilename();
         bfname =System.currentTimeMillis()+"-"+bfname;//2.1
         text.setBfname(bfname);//3
-        String savePath ="d:\\spring_img\\"+bfname;//4
+        String savePath ="D:\\spring_img\\"+bfname;//4
         if(!text.getBf().isEmpty()){
             text.getBf().transferTo(new File(savePath));
             //파일이 비어있지 않다면 그 파일을 세이브 패스 경로에 옮겨라(저장해라)

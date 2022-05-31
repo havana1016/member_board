@@ -64,8 +64,8 @@ public class mController {
         return "index";}
 
     @GetMapping("mypage")
-    String mypage(@RequestParam("mid")String mid,Model model){
-        model.addAttribute("mem", ms.findid(mid));
+    String mypage(@RequestParam("mid")String mid,Model model,HttpSession session){
+        model.addAttribute("mem",ms.findid(mid));
         return ("/member/mypage");
     }
     @GetMapping("pwc")
@@ -74,8 +74,39 @@ public class mController {
         model.addAttribute("type",type);
         return "/member/pwc";
     }
+    @GetMapping("update")
+    String update(Model model,@RequestParam("mid")String mid){
+        model.addAttribute("mem",ms.findid(mid));
+        model.addAttribute("mid",mid);
+        return "/member/update";
+    }
+    @PostMapping("update")
+    String update1(@ModelAttribute mDto mem,Model model){
+        if(ms.update(mem)>0){
+//            model.addAttribute("mem",session.getAttribute("logmem"));
+            model.addAttribute("mid",mem.getMid());
+            return "redirect:/member/mypage";
+        }return "index";
+    }
 
-
+    @GetMapping ("delete")
+    String delete(@RequestParam("mid")String mid){
+        if(ms.delete(mid)>0){
+            return "redirect:/member/logout";
+        }
+        return null;
+    }
+    @GetMapping ("member")
+    String member(Model model){
+        model.addAttribute("mlist",ms.member());
+        return "/member/member";
+    }
+    @GetMapping("admin")
+    @ResponseBody String admin(@RequestParam("mid")String mid){
+        if(ms.delete(mid)>0){
+            return "djfskjkh";
+        }return null;
+    }
 
 
 

@@ -38,7 +38,7 @@
 <div class="form-control container " style=" margin-top:200px; width: 400px">
     <h2 class="gray mt-2"><i class="bi bi-gem"></i></h2>
         <div>
-        <p class="ltext">Password</p>
+        <p class="ltext mb-1">Password</p>
         <input type="text" class="form-control gray" name="mpw" id="mpw" onclick="reset()" placeholder="비밀번호를 입력하세요.">
     </div>
     <div class="row">
@@ -48,38 +48,24 @@
 </div>
 </body>
 <script>
-    function logc(){
-        let mid=document.getElementById("mid").value;
+    function pwc(){
         let mpw=document.getElementById("mpw").value;
+        let logc=document.getElementById("upresult");
+        let logmpw='${mem.mpw}'
+        console.log("mpw : "+mpw)
+        console.log("logmpw : "+logmpw)
+            if (logmpw===mpw){
+                location.href="/member/${type}/?mid=${mem.mid}"
+            } else{
+                logc.innerHTML="비밀번호를 확인하세요.";
+                logc.style.color="red";}
 
-        $.ajax({
-            url:"logc",
-            type:"post",
-            data:{"mid":mid,"mpw":mpw},
-            dataType:"json",
-            success:function (e){
-                console.log("logc ajax success");
-                location.href="/board/findall"
-
-
-
-            },
-            error:function (e){
-                console.log("logc ajax error");
-                let logc=document.getElementById("upresult");
-
-                logc.innerHTML="아이디 또는 비밀번호를 확인하세요.";
-                logc.style.color="red";
-            }
-        })
-    }
-
-    function reset(){
-        location.href="/member/login"
     }
     function reset(){
-        document.getElementById("upresult").innerHTML="";
+        document.getElementById("mpw").focus()
     }
+
+
 
 
 </script>

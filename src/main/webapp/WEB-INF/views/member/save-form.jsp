@@ -16,6 +16,16 @@
     <script src="\resources\js\jquery.js"></script>
 
     <style>
+        body{
+            /*/ background-color: darkgray;*/
+            height: 100vh;
+            background-image: url("https://wallpapercave.com/wp/wp4415444.jpg");
+
+            /*background-image: url("https://allhdwallpapers.com/wp-content/uploads/2018/03/Supreme-Wallpapers-desktop-and-mobile-HD-18.jpg");*/
+            /*background-image: url("https://wallpapercave.com/wp/wp3904942.jpg");*/
+            background-repeat : no-repeat;
+            background-size : cover;
+        }
         .form-control:focus {
             border-color: #8c8f91;
             box-shadow: 0 0 0 0.2rem rgba(74, 74, 75, 0.25);
@@ -328,9 +338,8 @@
 
 </head>
 <body>
-    <div class="form-control container mt-3" style="width: 500px" >
-        <h2 class="gray mt-3 mb-4" style="text-align: right"><i class="bi bi-gem"></i>&nbsp;&nbsp;Join us</h2>
-
+    <div class="container mt-3" style="padding: 30px;width: 500px;background-color: rgba(253,253,253,0.8);" >
+        <h2 class="gray" style="text-align: right"><i class="bi bi-gem"></i>&nbsp;&nbsp;Join us</h2>
         <form action="/member/save" method="post" enctype="multipart/form-data">
             <div class="item row g-1">
             <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="" onblur="idc()"><br>
@@ -364,7 +373,7 @@
             <input class="btn btn-outline-secondary input-group" id="sub" type="submit" value="가입하기" disabled="disabled">
             </div>
         </form>
-        <button class="btn btn-secondary input-group mb-3" onclick="re()">취소</button>
+        <button class="btn btn-secondary input-group" onclick="re()">취소</button>
     </div>
 
 

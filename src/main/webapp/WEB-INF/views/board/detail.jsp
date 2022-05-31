@@ -52,7 +52,7 @@
 <body>
 
 <div class="form-control container mt-3" style="width: 700px">
-    <c:if test="${mem.mid eq sessionScope.logid}" >
+    <c:if test="${mem.mid eq sessionScope.logid || sessionScope.logid=='admin'}" >
         <div class="input-group mt-3">
             <button class="btn btn-outline-secondary  col-6" onclick="location.href='/board/update?bid=${mem.bid}'">수정하기</button>
             <button class="btn btn-outline-secondary col-6" onclick="location.href='/board/delete?bid=${mem.bid}'">삭제하기</button>
@@ -76,7 +76,9 @@
         <tr>
             <td class="gray" colspan="3">${mem.btext}</td>
         </tr>
-
+        <tr>
+        <td colspan="3" style="margin-right: 10px"><img src="${pageContext.request.contextPath}/upload/${mem.bfname}"
+                                                        alt="" width="300"></td></tr>
     </table>
     <div>
         <table class="table mt-5">
