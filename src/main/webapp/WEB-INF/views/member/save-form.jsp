@@ -342,7 +342,7 @@
         <h2 class="gray" style="text-align: right"><i class="bi bi-gem"></i>&nbsp;&nbsp;Join us</h2>
         <form action="/member/save" method="post" enctype="multipart/form-data">
             <div class="item row g-1">
-            <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="" onblur="idc()"><br>
+            <input  class="form-control" type="text" id="mid" name="mid" placeholder="아이디 입력" autofocus onclick="upid()" onkeyup="" onblur="idc(),idck()"><br>
             <p class="uptext" id="up-id"></p>
             </div>
             <div class="item row g-1">
